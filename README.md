@@ -1,6 +1,6 @@
-# Antelo linters
+# Antelo Linters
 
-Rubocop and Prettier cross-project configuration (by Flavio Antelo)
+My personal configuration for Rubocop and Prettier
 
 ## Usage
 

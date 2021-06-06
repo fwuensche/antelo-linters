@@ -1,3 +1,253 @@
 require:
   - rubocop-rails
   - rubocop-performance
+
+# AllCops:
+#   NewCops: enable
+#   AllowSymlinksInCacheRootDirectory: true
+#   Exclude:
+#     - db/**/*
+#     - vendor/**/*
+#     - '**/node_modules/**/*'
+#     - quarantine/**/*
+#     - bin/**/*
+#     - react-native/**/Podfile
+# Layout/ArgumentAlignment:
+#   Enabled: true
+#   EnforcedStyle: with_fixed_indentation
+# # This cop mainly do false positives.
+# Layout/ClosingParenthesisIndentation:
+#   Enabled: false
+# Layout/DotPosition:
+#   Enabled: true
+#   EnforcedStyle: leading
+# Layout/EmptyLineBetweenDefs:
+#   AllowAdjacentOneLineDefs: true
+# Layout/EmptyLinesAroundAccessModifier:
+#   Enabled: true
+# Layout/EmptyLinesAroundClassBody:
+#   Enabled: true
+#   EnforcedStyle: no_empty_lines
+#   Exclude:
+#     - 'test/**/*_test.rb'
+# Layout/EmptyLinesAroundModuleBody:
+#   Enabled: true
+#   EnforcedStyle: no_empty_lines
+# Layout/EmptyLineAfterGuardClause:
+#   Enabled: false
+# Layout/FirstArrayElementIndentation:
+#   Enabled: true
+#   EnforcedStyle: consistent
+# Layout/HashAlignment:
+#   Enabled: true
+#   EnforcedLastArgumentHashStyle: ignore_implicit
+# Layout/IndentationConsistency:
+#   Enabled: true
+#   EnforcedStyle: normal
+# # Too many false positives.
+# Layout/MultilineMethodCallBraceLayout:
+#   Enabled: false
+# Layout/MultilineOperationIndentation:
+#   Enabled: false
+# Layout/MultilineAssignmentLayout:
+#   Enabled: true
+#   EnforcedStyle: new_line
+# Layout/MultilineMethodCallIndentation:
+#   EnforcedStyle: indented
+# Layout/ParameterAlignment:
+#   Enabled: true
+#   EnforcedStyle: with_fixed_indentation
+# Layout/SpaceAroundMethodCallOperator:
+#   Enabled: true
+# Layout/SpaceInLambdaLiteral:
+#   Enabled: false
+# Layout/SpaceInsideBlockBraces:
+#   EnforcedStyle: space
+# Layout/SpaceInsideHashLiteralBraces:
+#   Enabled: true
+# Lint/ShadowingOuterLocalVariable:
+#   Enabled: false
+# Lint/RaiseException:
+#   Enabled: true
+# Lint/StructNewOverride:
+#   Enabled: true
+# Lint/RedundantSplatExpansion:
+#   Enabled: false
+# Lint/UselessAccessModifier:
+#   ContextCreatingMethods:
+#     - concerning
+# Metrics/AbcSize:
+#   Enabled: false
+# Metrics/BlockLength:
+#   Enabled: false
+# Metrics/ClassLength:
+#   Include:
+#     - test/integration/**/*_test.rb
+#   Enabled: true
+#   Max: 600
+# Metrics/CyclomaticComplexity:
+#   Enabled: false
+# Layout/LineLength:
+#   Max: 120
+# Metrics/MethodLength:
+#   Max: 40
+# Metrics/ModuleLength:
+#   Enabled: false
+# Metrics/PerceivedComplexity:
+#   Enabled: false
+# Naming/AccessorMethodName:
+#   Enabled: false
+# Naming/MethodParameterName:
+#   Enabled: true
+#   AllowedNames: io, id, to, by, on, in, at, ip, db, x, y, ok, ko
+# Naming/MemoizedInstanceVariableName:
+#   Enabled: true
+#   EnforcedStyleForLeadingUnderscores: optional
+# Naming/RescuedExceptionsVariableName:
+#   Enabled: true
+#   PreferredName: error
+# Naming/VariableName:
+#   Enabled: true
+# # Half the code is snake_case, and default is normalcase, no consensus.
+# Naming/VariableNumber:
+#   Enabled: false
+# Performance/Casecmp:
+#   Enabled: false
+# Rails/ActionFilter:
+#   Enabled: true
+# Rails/Date:
+#   Enabled: true
+# Rails/FindBy:
+#   Enabled: true
+# Rails/FilePath:
+#   Enabled: false
+# Rails/FindEach:
+#   Enabled: true
+# Rails/HasAndBelongsToMany:
+#   Enabled: false
+# Rails/HasManyOrHasOneDependent:
+#   Enabled: false
+# Rails/HttpPositionalArguments:
+#   Enabled: false
+# Rails/Output:
+#   Enabled: true
+# Rails/ReadWriteAttribute:
+#   Enabled: true
+# Rails/SaveBang:
+#   Enabled: true
+# Rails/ScopeArgs:
+#   Enabled: true
+# Rails/SkipsModelValidations:
+#   Enabled: false
+# Rails/TimeZone:
+#   Enabled: true
+# Security/YAMLLoad:
+#   Enabled: true
+# Style/Alias:
+#   EnforcedStyle: prefer_alias_method
+# Style/AndOr:
+#   Enabled: true
+# Style/AsciiComments:
+#   Enabled: false
+# Style/BlockDelimiters:
+#   Enabled: false
+# Style/CharacterLiteral:
+#   Enabled: false
+# Style/CollectionMethods:
+#   Enabled: true
+#   PreferredMethods:
+#     collect: map
+#     collect!: map!
+#     detect: find
+#     find_all: select
+#     inject: reduce
+# Style/ExponentialNotation:
+#   Enabled: true
+# Style/MultilineTernaryOperator:
+#   Enabled: false
+# # The rubocop solution is much less readable, and do not bring enough value.
+# Style/StructInheritance:
+#   Enabled: false
+# Style/TrailingCommaInArguments:
+#   # EnforcedStyleForMultiline: consistent_comma
+#   # TODO: This rule is bugged since 0.61, we may re-check in a few versions if it is fixed.
+#   Enabled: false
+# Style/TrailingUnderscoreVariable:
+#   Enabled: false
+# Style/ClassAndModuleChildren:
+#   # Nothing has been decided on this, so we disable it until there is a consensus.
+#   Enabled: false
+# Style/CommandLiteral:
+#   Enabled: true
+#   EnforcedStyle: percent_x
+# Style/CommentAnnotation:
+#   Enabled: false
+# Style/CommentedKeyword:
+#   Enabled: false
+Style/Documentation:
+  Enabled: false
+# Style/DoubleNegation:
+#   Enabled: false
+# Style/EvenOdd:
+#   Enabled: false
+# Style/ExpandPathArguments:
+#   Enabled: true
+# Style/FrozenStringLiteralComment:
+#   Enabled: true
+# Style/FormatStringToken:
+#   Enabled: false
+# Style/GuardClause:
+#   Enabled: false
+# Style/HashEachMethods:
+#   Enabled: true
+# Style/HashSyntax:
+#   Enabled: true
+#   EnforcedStyle: ruby19
+#   UseHashRocketsWithSymbolValues: false
+# Style/HashTransformKeys:
+#   Enabled: true
+# Style/HashTransformValues:
+#   Enabled: true
+# Style/Lambda:
+#   Enabled: false
+# Style/MethodDefParentheses:
+#   Enabled: true
+#   EnforcedStyle: require_parentheses
+# # This cop is bad: `extend self` and `module_function` are not equivalent.
+# Style/ModuleFunction:
+#   Enabled: false
+# Style/MultilineBlockChain:
+#   Enabled: false
+# Style/MutableConstant:
+#   Enabled: true
+# Style/NegatedIf:
+#   Enabled: false
+# Style/NumericPredicate:
+#   Enabled: true
+#   EnforcedStyle: comparison
+# Style/PercentLiteralDelimiters:
+#   PreferredDelimiters:
+#     '%W': ()
+#     '%i': ()
+#     '%w': ()
+# Style/RaiseArgs:
+#   EnforcedStyle: exploded
+# Style/SignalException:
+#   Enabled: false
+# Style/StringLiterals:
+#   Enabled: true
+#   EnforcedStyle: single_quotes
+# Style/SymbolArray:
+#   Enabled: true
+# Style/TrailingCommaInArrayLiteral:
+#   Enabled: true
+#   EnforcedStyleForMultiline: consistent_comma
+# Style/TrailingCommaInHashLiteral:
+#   Enabled: true
+#   EnforcedStyleForMultiline: comma
+# Style/MethodCallWithArgsParentheses:
+#   Enabled: true
+#   Include:
+#     - test/**/*.rb
+#   IgnoredMethods: ['require', 'require_relative']
+

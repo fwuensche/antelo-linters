@@ -2,8 +2,8 @@ require:
   - rubocop-rails
   - rubocop-performance
 
-# AllCops:
-#   NewCops: enable
+AllCops:
+  NewCops: enable
 #   AllowSymlinksInCacheRootDirectory: true
 #   Exclude:
 #     - db/**/*

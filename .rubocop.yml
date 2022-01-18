@@ -174,9 +174,8 @@ AllCops:
 #   Enabled: false
 # Style/TrailingUnderscoreVariable:
 #   Enabled: false
-# Style/ClassAndModuleChildren:
-#   # Nothing has been decided on this, so we disable it until there is a consensus.
-#   Enabled: false
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
 # Style/CommandLiteral:
 #   Enabled: true
 #   EnforcedStyle: percent_x
